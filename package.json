@@ -1,6 +1,6 @@
 {
   "name": "braingames-cake",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Brain Games app by Cognitive Cake",
   "main": "src/bin/brain-games.js",
   "bin": {
@@ -10,7 +10,7 @@
     "babel-node": "babel-node",
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
     "build-win": "SET NODE_ENV=production & babel src --out-dir dist --source-maps inline",
-    "prepublishOnly": "npm run build-win"    
+    "prepublishOnly": "npm run build-win"
   },
   "files": [
     "dist"
@@ -35,5 +35,8 @@
     "babel-core": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-stage-0": "^6.24.1"
+  },
+  "dependencies": {
+    "readline-sync": "^1.4.7"
   }
 }
