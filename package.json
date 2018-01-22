@@ -1,6 +1,6 @@
 {
   "name": "braingames-cake",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Brain Games app by Cognitive Cake",
   "main": "src/bin/brain-games.js",
   "bin": {
