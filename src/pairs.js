@@ -1,10 +1,10 @@
-const makePair = (q, a) => {
+const makePair = (a, b) => {
   const pair = (getFunctionName) => {
     switch (getFunctionName) {
       case 'car':
-        return q;
-      case 'cdr':
         return a;
+      case 'cdr':
+        return b;
       default:
         return console.log(`Unknown function name ${getFunctionName}`);
     }
