@@ -1,12 +1,13 @@
 {
   "name": "braingames-cake",
-  "version": "0.5.3",
+  "version": "0.6.0",
   "description": "Brain Games app by Cognitive Cake",
   "main": "src/bin/brain-games.js",
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
     "brain-even": "dist/bin/brain-even.js",
-    "brain-calc": "dist/bin/brain-calc.js"
+    "brain-calc": "dist/bin/brain-calc.js",
+    "brain-gdc": "dist/bin/brain-gdc.js"
   },
   "scripts": {
     "babel-node": "babel-node",

@@ -6,8 +6,8 @@ const getCorrectAnswer = number => (isEven(number) ? 'yes' : 'no');
 
 const createTask = () => {
   const question = Math.round(getRandom(1, 100));
-  const answer = getCorrectAnswer(question);
-  return makePair(question, answer);
+  const correctAnswer = getCorrectAnswer(question);
+  return makePair(question, correctAnswer);
 };
 
 const runGame = () => {
