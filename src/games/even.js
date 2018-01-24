@@ -1,6 +1,6 @@
 import makePair from '../pairs';
 import getRandom, { isEven } from '../tools';
-import runEngine from './engine/engine';
+import runEngine from '..';
 
 const getCorrectAnswer = number => (isEven(number) ? 'yes' : 'no');
 

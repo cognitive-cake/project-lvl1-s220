@@ -1,6 +1,6 @@
 import makePair from '../pairs';
 import getRandom, { findGcd } from '../tools';
-import runEngine from './engine/engine';
+import runEngine from '..';
 
 const getCorrectAnswer = (num1, num2) => {
   if (num1 === num2) {
