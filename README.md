@@ -3,4 +3,5 @@
 
 ## Use
 `brain-even` - run even-odd game
+
 `brain-calc` - run calc game
