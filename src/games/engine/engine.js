@@ -5,15 +5,15 @@ import { car, cdr } from '../../pairs';
 const getQuestion = pair => car(pair);
 const getAnswer = pair => cdr(pair);
 
-const askQuestions = (generateQuestion, name) => {
+const askQuestions = (createTask, name) => {
   const iter = (n) => {
     if (n === 3) {
       return console.log(`Congratulations, ${name}!`);
     }
 
-    const questionAndAnswer = generateQuestion();
-    const question = getQuestion(questionAndAnswer);
-    const correctAnswer = getAnswer(questionAndAnswer);
+    const task = createTask();
+    const question = getQuestion(task);
+    const correctAnswer = getAnswer(task);
 
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
@@ -29,11 +29,11 @@ const askQuestions = (generateQuestion, name) => {
 };
 
 
-const runEngine = (generateQuestion, msg) => {
+const runEngine = (createTask, msg) => {
   console.log('Welcome to the Brain Games!');
   console.log(msg);
   const name = getName();
-  askQuestions(generateQuestion, name);
+  askQuestions(createTask, name);
 };
 
 export default runEngine;

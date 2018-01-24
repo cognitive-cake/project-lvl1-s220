@@ -1,17 +1,37 @@
 import makePair from '../pairs';
-import getRandom, { isEven } from '../tools';
+import getRandom from '../tools';
 import runEngine from './engine/engine';
 
-const getCorrectAnswer = number => (isEven(number) ? 'yes' : 'no');
 
-const generateQuestion = () => {
-  const question = Math.round(getRandom(1, 100));
-  const answer = getCorrectAnswer(question);
-  return makePair(question, answer);
+const createTask = () => {
+  const number1 = Math.round(getRandom(1, 20));
+  const number2 = Math.round(getRandom(1, 20));
+  const exprSignNumber = Math.floor(getRandom(0, 3));
+
+  let question = null;
+  let correctAnswer = null;
+
+  switch (exprSignNumber) {
+    case 0:
+      question = `${number1} + ${number2}`;
+      correctAnswer = number1 + number2;
+      return makePair(question, correctAnswer);
+    case 1:
+      question = `${number1} - ${number2}`;
+      correctAnswer = number1 - number2;
+      return makePair(question, correctAnswer);
+    case 2:
+      question = `${number1} * ${number2}`;
+      correctAnswer = number1 * number2;
+      return makePair(question, correctAnswer);
+    default:
+      break;
+  }
+  return null;
 };
 
 const runGame = () => {
-  runEngine(generateQuestion, 'What is the result of the expression?');
+  runEngine(createTask, 'What is the result of the expression?');
 };
 
 export default runGame;
