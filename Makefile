@@ -2,7 +2,7 @@ install:
 	npm install
 
 start:
-	npm run babel-node -- src/bin/brain-gdc.js
+	npm run babel-node -- src/bin/brain-balance.js
 
 publish:
 	npm publish

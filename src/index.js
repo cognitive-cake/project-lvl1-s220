@@ -37,7 +37,9 @@ const askQuestions = (createTask, name) => {
 const runEngine = (createTask, msg) => {
   console.log('Welcome to the Brain Games!');
   console.log(msg);
+  console.log('');
   const name = getName();
+  console.log('');
   askQuestions(createTask, name);
 };
 
