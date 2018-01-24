@@ -29,7 +29,9 @@ const askQuestions = (generateQuestion, name) => {
 };
 
 
-const runEngine = (generateQuestion) => {
+const runEngine = (generateQuestion, msg) => {
+  console.log('Welcome to the Brain Games!');
+  console.log(msg);
   const name = getName();
   askQuestions(generateQuestion, name);
 };

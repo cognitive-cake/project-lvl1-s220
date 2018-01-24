@@ -11,9 +11,7 @@ const generateQuestion = () => {
 };
 
 const runGame = () => {
-  console.log('Welcome to the Brain Games!');
-  console.log('Answer "yes" if number even, otherwise answer "no".');
-  runEngine(generateQuestion);
+  runEngine(generateQuestion, 'Answer "yes" if number even, otherwise answer "no".');
 };
 
 export default runGame;
