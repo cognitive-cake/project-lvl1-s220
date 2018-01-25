@@ -2,7 +2,7 @@ import makePair from '../pairs';
 import getRandom, { arrToNum } from '../tools';
 import runEngine from '..';
 
-const correctingArray = (currVal, index, arr) => {
+const correctTheArray = (currVal, index, arr) => {
   switch (index) {
     case 0:
       return parseInt(currVal, 10) + 1;
@@ -19,12 +19,12 @@ const balancingArrayOfNums = (array) => {
   const highestNum = sortedArray[sortedArray.length - 1];
 
   if (highestNum - lowestNum <= 1) {
-    console.log(sortedArray); // Для демонстрации этапов вычисления сбалансированного числа
+    // console.log(sortedArray); // Uncomment to show the process of searching for the answer
     return sortedArray;
   }
 
-  const result = sortedArray.map(correctingArray);
-  console.log(result); // Для демонстрации этапов вычисления сбалансированного числа
+  const result = sortedArray.map(correctTheArray);
+  // console.log(result); // Uncomment to show the process of searching for the answer
   return balancingArrayOfNums(result);
 };
 
