@@ -32,7 +32,7 @@ const getCorrectAnswer = (num) => {
   const arrayOfNums = String(num).split('');
   const correctAnswer = balancingArrayOfNums(arrayOfNums);
 
-  return arrToNum(correctAnswer);
+  return arrToNum(correctAnswer, '');
 };
 
 const createTask = () => {

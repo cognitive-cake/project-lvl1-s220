@@ -6,6 +6,6 @@ export const findGcd = (a, b) => {
   }
   return findGcd(b, a % b);
 };
-export const arrToNum = arr => parseInt(arr.join(''), 10);
+export const arrToNum = (arr, separator) => parseInt(arr.join(separator), 10);
 
 export default getRandomArbitrary;
