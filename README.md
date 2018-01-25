@@ -4,6 +4,10 @@
 ## Use
 `brain-even` -- run 'even-odd' game
 
-`brain-calc` -- run 'calc' game
+`brain-calc` -- run 'calculator' game
 
-`brain-balance` -- run 'balance' game
+`brain-gcd` -- run 'find greatest common divisor' game
+
+`brain-balance` -- run 'balance the number' game
+
+`brain-progression` -- run 'progression' game
