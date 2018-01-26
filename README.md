@@ -11,3 +11,5 @@
 `brain-balance` -- run 'balance the number' game
 
 `brain-progression` -- run 'progression' game
+
+`brain-prime` -- run 'Is prime number?' game
