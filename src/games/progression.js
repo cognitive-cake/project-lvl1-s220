@@ -2,35 +2,37 @@ import makePair from '../pairs';
 import getRandom from '../tools';
 import runEngine from '..';
 
-const createArithmeticProgression = (str, step, value, missingNum, counter) => {
-  if (counter === 10) {
-    return str;
-  }
-  if (counter === missingNum) {
-    return createArithmeticProgression(
-      str.concat('.. '),
-      step,
-      value + step,
-      missingNum,
+const getQuestion = (step, value, missingNum) => {
+  const iter = (str, num, counter) => {
+    if (counter === 10) {
+      return str;
+    }
+    if (counter === missingNum) {
+      return iter(
+        str.concat('.. '),
+        num + step,
+        counter + 1,
+      );
+    }
+    return iter(
+      str.concat(`${num} `),
+      num + step,
       counter + 1,
     );
-  }
-  return createArithmeticProgression(
-    str.concat(`${value} `),
-    step,
-    value + step,
-    missingNum,
-    counter + 1,
-  );
+  };
+  return iter('', value, 0);
 };
+
+const getCorrectAnswer = (step, firstNum, missingNum) => firstNum + (missingNum * step);
 
 const createTask = () => {
   const step = Math.round(getRandom(2, 10));
   const firstNum = Math.round(getRandom(2, 15));
   const missingNum = Math.round(getRandom(0, 9));
-  const question = createArithmeticProgression('', step, firstNum, missingNum, 0);
 
-  const correctAnswer = firstNum + (missingNum * step);
+  const question = getQuestion(step, firstNum, missingNum);
+  const correctAnswer = getCorrectAnswer(step, firstNum, missingNum);
+
   return makePair(question, correctAnswer);
 };
 
