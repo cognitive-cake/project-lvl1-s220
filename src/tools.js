@@ -13,11 +13,11 @@ export const isPrime = (num) => {
       return iter(divisor + 1);
     }
     if (num % 2 === 0 || num % 3 === 0 || num % divisor === 0) {
-      console.log(num, divisor, 'Answer: no'); // Uncomment to show the answer
+      // console.log(num, divisor, 'Answer: no'); // Uncomment to show the answer
       return false;
     }
     if (divisor > Math.sqrt(num)) {
-      console.log(num, divisor, 'Answer: yes'); // Uncomment to show the answer
+      // console.log(num, divisor, 'Answer: yes'); // Uncomment to show the answer
       return true;
     }
     return iter(divisor + 1);
